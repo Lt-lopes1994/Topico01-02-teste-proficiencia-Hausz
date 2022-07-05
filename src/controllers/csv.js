@@ -23,4 +23,10 @@ const readCSV = async (req, res) => {
   stream.pipe(streamCsv);
 };
 
-module.exports = readCSV;
+const getAll = async (req, res) => {
+  const result = await knex("topico02").select("*");
+
+  return res.json(result);
+};
+
+module.exports = { readCSV, getAll };
