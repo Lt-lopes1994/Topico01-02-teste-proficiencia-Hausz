@@ -1200,4 +1200,277 @@ HTTP 201 - Created
 ];
 ```
 
-###
+### GET listagem de CSV por id (/products/:id)
+
+#### dados enviados
+
+    - id: id do produto
+    - token
+
+```js
+
+ {
+    id: "953595",
+    listing_url: "https://www.airbnb.com/rooms/953595",
+    scrape_id: "20160104002432",
+    last_scraped: "2016-01-04",
+    name: "Bright & Airy Queen Anne Apartment",
+    sumary: null,
+    space:
+      "Beautiful, hypoallergenic apartment in an extremely safe, quiet and pedestrian-friendly section of Queen Anne.  A leafy-green location that puts the best of Seattle at your doorstep. Free WiFi, free parking, ...even free pillows!  What's special about this place? Hypo-allergenic bedding, mattresses/covers and new pillows with each rental. (So feel free to take your new pillows with you!)  A beautiful restoration mixing period details & modern sensibilities: Hardwood floors throughout, white subway tile, low/no VOCs & non-toxic paints keep this home-away-from-home clean, smart and healthy. Radiant heat and oil radiators mean no blowing hot air or dust.  Great Amenities: Free WiFi & internet TV (LED flatscreen). Fully-equipped kitchen with stainless-steel appliances, sink & disposal. Large washer & dryer.  Iron/ironing board. Hairdryer. Plenty of storage. Convenient parking, both on- and off-street. The Best Location: Enjoy Seattle's celebrated Macrina bakery, neighborhood cafes, boutiqu",
+    description:
+      "Chemically sensitive? We've removed the irritants triggering allergy or asthma attacks, like carpeting, forced air & used pillows, all culprits that harbor fungus, mold & bacteria.  No smoking, no pets.  Designed for healthy living, so breathe easy. Beautiful, hypoallergenic apartment in an extremely safe, quiet and pedestrian-friendly section of Queen Anne.  A leafy-green location that puts the best of Seattle at your doorstep. Free WiFi, free parking, ...even free pillows!  What's special about this place? Hypo-allergenic bedding, mattresses/covers and new pillows with each rental. (So feel free to take your new pillows with you!)  A beautiful restoration mixing period details & modern sensibilities: Hardwood floors throughout, white subway tile, low/no VOCs & non-toxic paints keep this home-away-from-home clean, smart and healthy. Radiant heat and oil radiators mean no blowing hot air or dust.  Great Amenities: Free WiFi & internet TV (LED flatscreen). Fully-equipped kitchen with st",
+    experiences_offered: "none",
+    neighborhood_overview:
+      "Queen Anne is a wonderful, truly functional village.  You can walk everywhere... for coffee, for groceries, for a night out, for breathtaking views of the Puget Sound.",
+    notes:
+      "What's up with the free pillows?  Our home was renovated and restored with health & safety in mind, especially the elimination/reduction of indoor allergens, toxins & other pollutants.  (For this reason, we have no carpets, just hardwood & slate floors, with radiant heat.)  Pillows tend to house a LOT of allergens over time, even when just used by a single owner.  The statistics make many people feel pretty queasy but, essentially, pillows become great breeding grounds for bacteria and dust mites, not to mention drool, hair oils and perspiration. Since most people sweat more than a pint a night, the pillow can also easily trap mildew and mold. We use dust mite protectors for mattresses and duvets, but haven't found any that work well for pillows that maintain comfort/elasticity without the use of outgassing materials.  So, I let the guests take their pillows but ask that they leave the pillowcases. And if you leave the pillows behind, they'll be donated to a local women's shelter that ",
+    transit:
+      "Convenient bus stops are just down the block, if you're headed downtown or further afield to explore.  Zip cars are also strategically located on Queen Anne hill.",
+    thumbnail_url:
+      "https://a0.muscache.com/ac/pictures/14409893/f8e3ed8d_original.jpg?interpolation=lanczos-none&size=small&output-format=jpg&output-quality=70",
+    medium_url:
+      "https://a0.muscache.com/im/pictures/14409893/f8e3ed8d_original.jpg?aki_policy=medium",
+    picture_url:
+      "https://a0.muscache.com/ac/pictures/14409893/f8e3ed8d_original.jpg?interpolation=lanczos-none&size=large_cover&output-format=jpg&output-quality=70",
+    xl_picture_url:
+      "https://a0.muscache.com/ac/pictures/14409893/f8e3ed8d_original.jpg?interpolation=lanczos-none&size=x_large_cover&output-format=jpg&output-quality=70",
+    host_id: "5177328",
+    host_url: "https://www.airbnb.com/users/show/5177328",
+    host_name: "Andrea",
+    host_since: "2013-02-21",
+    host_location: "Seattle, Washington, United States",
+    host_about:
+      "Living east coast/left coast/overseas.  Time is short & it's a big world. ",
+    host_response_time: "within an hour",
+    host_response_rate: "98%",
+    host_acceptance_rate: "100%",
+    host_is_superhost: "t",
+    host_tuhmbnail_url: null,
+    host_picture_url:
+      "https://a0.muscache.com/ac/users/5177328/profile_pic/1361540767/original.jpg?interpolation=lanczos-none&crop=w:w;*,*&crop=h:h;*,*&resize=225:*&output-format=jpg&output-quality=70",
+    host_neighbourhood: "Queen Anne",
+    host_listings_count: "6",
+    host_total_listings_count: "6",
+    host_verifications:
+      "['email', 'phone', 'facebook', 'linkedin', 'reviews', 'jumio']",
+    host_has_profile_pic: "t",
+    host_identity_verified: "t",
+    street: "7th Avenue West, Seattle, WA 98119, United States",
+    neighbourdhood: null,
+    neighbourhood_cleansed: "West Queen Anne",
+    neighbourhood_group_cleansed: "Queen Anne",
+    city: "Seattle",
+    state: "WA",
+    zipcode: 98119,
+    market: "Seattle",
+    smart_location: "Seattle, WA",
+    country_code: "US",
+    country: "United States",
+    latitude: 47.63912312136253,
+    longitude: -122.36566646439582,
+    is_location_exact: "t",
+    property_type: "Apartment",
+    room_type: "Entire home/apt",
+    accommodates: 4,
+    bedrooms: 1,
+    beds: 1,
+    bed_type: "Real Bed",
+    amenities:
+      '{TV,Internet,"Wireless Internet",Kitchen,"Free Parking on Premises","Buzzer/Wireless Intercom",Heating,"Family/Kid Friendly",Washer,Dryer,"Smoke Detector","Carbon Monoxide Detector","First Aid Kit","Safety Card","Fire Extinguisher",Essentials}',
+    square_feet: "",
+    price: "$150.00",
+    weekly_price: "$1,000.00",
+    monthly_price: "$3,000.00",
+    security_deposit: "$100.00",
+    cleaning_fee: "$40.00",
+    guests_included: "1",
+    extra_people: "$0.00",
+    minimum_night: null,
+    maximum_night: null,
+    calendar_updated: "today",
+    has_availability: "t",
+    availability_30: 13,
+    availability_60: 13,
+    availability_90: 16,
+    availability_365: 291,
+    calendar_last_scraped: "2016-01-04",
+    number_of_reviews: 43,
+    first_review: "2013-08-19",
+    last_review: "2015-12-29",
+    review_scores_rating: 96,
+    review_scores_accuracy: 10,
+    review_scores_cleanliness: 10,
+    review_scores_checkin: 10,
+    review_scores_communication: 10,
+    review_scores_location: 10,
+    review_scores_value: 10,
+    requires_license: "f",
+    license: "",
+    jurisdiction_names: "WASHINGTON",
+    instant_bookable: "f",
+    cancellation_policy: "strict",
+    require_guest_profile_picture: "t",
+    require_guest_phone_verification: "t",
+    calculated_host_listings_count: 6,
+    reviews_per_month: 1.48,
+    bathrooms: 1,
+    host_thumbnail_url:
+      "https://a0.muscache.com/ac/users/5177328/profile_pic/1361540767/original.jpg?interpolation=lanczos-none&crop=w:w;*,*&crop=h:h;*,*&resize=50:*&output-format=jpg&output-quality=70",
+    maximum_nights: 90,
+    minimum_nights: 2,
+    neighbourhood: "Queen Anne",
+    summary:
+      "Chemically sensitive? We've removed the irritants triggering allergy or asthma attacks, like carpeting, forced air & used pillows, all culprits that harbor fungus, mold & bacteria.  No smoking, no pets.  Designed for healthy living, so breathe easy.",
+  }
+
+```
+
+<h1 align="center">Dados para as rotas de integrção com a API da Omie:</h1>
+
+### POST Registro de clientes (/registerCostumer)
+
+#### dados de envio:
+
+```javascript
+    {
+    "codigo_cliente_integracao": "sandbar01",
+    "email": "primeiro@ccliente.com.br",
+    "razao_social": "Primeiro Cliente  Ltda Me",
+    "nome_fantasia": "Primeiro Cliente",
+    "cnpj_cpf": "86977167211"
+    }
+```
+
+#### dados de retorno:
+
+    -Erros são importados direto da API da Omie e são retornados como JSON.
+
+### POST Deleçao de clientes (/deleteCostumer)
+
+    -dados de envio:
+    Precisa informar o código do cliente ou o código cliente omie que deseja deletar.
+
+```javascript
+    {
+  "codigo_cliente_omie": 0,
+  "codigo_cliente_integracao": "sandbar01"
+}
+```
+
+#### dados de retorno:
+
+    -Erros são importados direto da API da Omie e são retornados como JSON.
+
+### POST Listagem de clientes (/listCostumers)
+
+    -dados de envio:
+
+```javascript
+  {
+	"pagina": 1,
+	"registros_por_pagina": 50
+  }
+```
+
+#### dados de retorno:
+
+    -Erros são importados direto da API da Omie e são retornados como JSON.
+
+#### POST Cadastro de produtos (/registerProduct)
+
+-dados de envio:
+
+```javascript
+{
+"cabecalho": {
+ "codigo_cliente": 3792227,
+ "codigo_pedido_integracao": "1657044810",
+ "data_previsao": "05/07/2022",
+ "etapa": "10",
+ "numero_pedido": "45171",
+ "codigo_parcela": "999",
+ "quantidade_itens": 2
+},
+"det": [
+ {
+   "ide": {
+     "codigo_item_integracao": "4422421"
+   },
+   "inf_adic": {
+     "peso_bruto": 150,
+     "peso_liquido": 150
+   },
+   "produto": {
+     "cfop": "5.102",
+     "codigo_produto": "4422421",
+     "descricao": "Telefone Celular X",
+     "ncm": "9403.30.00",
+     "quantidade": 1,
+     "tipo_desconto": "V",
+     "unidade": "UN",
+     "valor_desconto": 0,
+     "valor_unitario": 200
+   }
+ }
+],
+"frete": {
+ "modalidade": "9"
+},
+"informacoes_adicionais": {
+ "codigo_categoria": "1.01.03",
+ "codigo_conta_corrente": 11850365,
+ "consumidor_final": "S",
+ "enviar_email": "N"
+},
+"lista_parcelas": {
+ "parcela": [
+   {
+     "data_vencimento": "06/07/2022",
+     "numero_parcela": 1,
+     "percentual": 50,
+     "valor": 100
+   },
+   {
+     "data_vencimento": "18/12/2022",
+     "numero_parcela": 2,
+     "percentual": 50,
+     "valor": 100
+   }
+ ]
+}
+}
+```
+
+#### dados de retorno:
+
+    -Erros são importados direto da API da Omie e são retornados como JSON.
+
+### POST Listagem de produtos (/listProducts)
+
+    -dados de envio:
+
+```javascript
+  {
+  "pagina": 1,
+  "registros_por_pagina": 50
+  }
+```
+
+#### dados de retorno:
+
+    -Erros são importados direto da API da Omie e são retornados como JSON.
+
+### POST consultar um pedido (/consultOrder)
+
+-dados de envio:
+
+```js
+  {
+  "codigo_pedido": 25953530
+  }
+```
+
+#### dados de retorno:
+
+    -Erros são importados direto da API da Omie e são retornados como JSON.
