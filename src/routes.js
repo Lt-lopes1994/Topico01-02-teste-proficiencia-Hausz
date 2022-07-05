@@ -3,7 +3,7 @@ const express = require("express");
 const { readCSV, getAll, getById } = require("./controllers/csv");
 
 const {
-  registerCustomer,
+  registerCustomerOmie,
   getCustomer,
   listCostumers,
   deleteCustomer,
@@ -94,6 +94,7 @@ routes.get("/billingDetails/:id_charge", billingDetails);
 
 //?? crud do terceiro tópico.
 
+routes.post("/registerCustomerOmie", registerCustomerOmie);
 routes.post("/getCustomer", getCustomer);
 routes.post("/listCustomers", listCostumers);
 routes.post("/deleteCustomer", deleteCustomer);
