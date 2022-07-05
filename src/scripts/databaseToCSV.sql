@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS topico02, users;
+DROP TABLE IF EXISTS topico02;
 
 CREATE TABLE topico02 (
   id bigint PRIMARY KEY NOT NULL,
