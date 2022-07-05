@@ -1,6 +1,6 @@
 const fs = require("fs");
 const csv = require("fast-csv");
-const knex = require("../connection/dbConnection");
+const knex = require("../scripts/conection");
 
 const readCSV = async (req, res) => {
   const filePath = "./src/csvFiles/backend.csv";
