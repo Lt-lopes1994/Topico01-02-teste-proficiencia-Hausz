@@ -1,6 +1,6 @@
 const api = require("../services/api");
 
-const registerCustomer = async (req, res) => {
+const registerCustomerOmie = async (req, res) => {
   const {
     codigo_cliente_integracao,
     email,
@@ -128,7 +128,7 @@ const deleteCustomer = async (req, res) => {
 };
 
 module.exports = {
-  registerCustomer,
+  registerCustomerOmie,
   getCustomer,
   listCostumers,
   deleteCustomer,
