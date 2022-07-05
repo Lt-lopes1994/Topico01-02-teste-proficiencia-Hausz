@@ -1,6 +1,5 @@
 {
   "name": "projeto-hausz",
-  "description": "![](https://i.imgur.com/xG74tOh.png)",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,15 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carlostsa10/back-integral-m05-desafio-t05.git"
+    "url": ""
   },
-  "author": "Bruno Mantovan, Carlos Tavares, Emanuel Brito, Nathan Renovato e Vítor Leal.",
+  "author": "Bruno Mantovan.",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/carlostsa10/back-integral-m05-desafio-t05/issues"
-  },
-  "homepage": "https://github.com/carlostsa10/back-integral-m05-desafio-t05#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "date-fns": "^2.28.0",
