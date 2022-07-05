@@ -1,12 +1,27 @@
 const express = require("express");
 
 const { readCSV, getAll, getById } = require("./controllers/csv");
+
+const {
+  registerCustomer,
+  getCustomer,
+  listCostumers,
+  deleteCustomer,
+} = require("./controllers/rotasOmieClientes");
+
+const {
+  registerOrder,
+  consultOrder,
+  listOrders,
+} = require("./controllers/pedidosDeVenda");
+
 const {
   registerUser,
   informationToTheUserHimself,
   updateUser,
 } = require("./controllers/users");
 const login = require("./controllers/login");
+
 const {
   registerCustomer,
   delinquentCustomerHighligths,
@@ -17,6 +32,7 @@ const {
   customerDetail,
   customerUpdate,
 } = require("./controllers/customers");
+
 const {
   collectionHighlights,
   totalAmountAllCharges,
@@ -75,5 +91,15 @@ routes.get("/billingList", billingList);
 routes.patch("/billingEdit/:id_charge", billingEdit);
 routes.delete("/deleteCharge/:id_charge", deleteCharge);
 routes.get("/billingDetails/:id_charge", billingDetails);
+
+//?? crud do terceiro tópico.
+
+routes.post("/getCustomer", getCustomer);
+routes.post("/listCustomers", listCostumers);
+routes.post("/deleteCustomer", deleteCustomer);
+
+routes.post("/registerOrder", registerOrder);
+routes.post("/consultOrder", consultOrder);
+routes.post("/listOrders", listOrders);
 
 module.exports = routes;

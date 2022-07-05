@@ -1,0 +1,1049 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-07-05T18:55:53.838Z",
+  "__export_source": "insomnia.desktop.app:v2022.4.2",
+  "resources": [
+    {
+      "_id": "req_e88497977d444e78b598ee791619584b",
+      "parentId": "fld_f95fbeff65f0489cb9738612d24fdd58",
+      "modified": 1657047287738,
+      "created": 1657047041178,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/registerOrder",
+      "name": "registrar pedidos",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"cabecalho\": {\n    \"codigo_cliente\": 3792227,\n    \"codigo_pedido_integracao\": \"1657044810\",\n    \"data_previsao\": \"05/07/2022\",\n    \"etapa\": \"10\",\n    \"numero_pedido\": \"45171\",\n    \"codigo_parcela\": \"999\",\n    \"quantidade_itens\": 2\n  },\n  \"det\": [\n    {\n      \"ide\": {\n        \"codigo_item_integracao\": \"4422421\"\n      },\n      \"inf_adic\": {\n        \"peso_bruto\": 150,\n        \"peso_liquido\": 150\n      },\n      \"produto\": {\n        \"cfop\": \"5.102\",\n        \"codigo_produto\": \"4422421\",\n        \"descricao\": \"Telefone Celular X\",\n        \"ncm\": \"9403.30.00\",\n        \"quantidade\": 1,\n        \"tipo_desconto\": \"V\",\n        \"unidade\": \"UN\",\n        \"valor_desconto\": 0,\n        \"valor_unitario\": 200\n      }\n    }\n  ],\n  \"frete\": {\n    \"modalidade\": \"9\"\n  },\n  \"informacoes_adicionais\": {\n    \"codigo_categoria\": \"1.01.03\",\n    \"codigo_conta_corrente\": 11850365,\n    \"consumidor_final\": \"S\",\n    \"enviar_email\": \"N\"\n  },\n  \"lista_parcelas\": {\n    \"parcela\": [\n      {\n        \"data_vencimento\": \"06/07/2022\",\n        \"numero_parcela\": 1,\n        \"percentual\": 50,\n        \"valor\": 100\n      },\n      {\n        \"data_vencimento\": \"18/12/2022\",\n        \"numero_parcela\": 2,\n        \"percentual\": 50,\n        \"valor\": 100\n      }\n    ]\n  }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d8dc9ba3deca4b88b30aff4807137c95"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1657041184695.1562,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_f95fbeff65f0489cb9738612d24fdd58",
+      "parentId": "fld_9e39d3259ec74cb786296f9b9b934d63",
+      "modified": 1657047015960,
+      "created": 1657047015960,
+      "name": "pedidos",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1657047015960,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_9e39d3259ec74cb786296f9b9b934d63",
+      "parentId": "wrk_edd184540a3141d0ba89bd1c00be2697",
+      "modified": 1657047028617,
+      "created": 1657046869936,
+      "name": "integração omie",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1657046869936,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_edd184540a3141d0ba89bd1c00be2697",
+      "parentId": null,
+      "modified": 1657034634409,
+      "created": 1657034634409,
+      "name": "Hausz",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_1c178ccba4d944b99ec228884bb8922c",
+      "parentId": "fld_f95fbeff65f0489cb9738612d24fdd58",
+      "modified": 1657047301177,
+      "created": 1657047074386,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/consultOrder",
+      "name": "consultar um pedido",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"codigo_pedido\": 25953530\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d8dc9ba3deca4b88b30aff4807137c95"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1657041184682.6562,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a5d81ca4b6ab4d719196f1b0713326b9",
+      "parentId": "fld_f95fbeff65f0489cb9738612d24fdd58",
+      "modified": 1657047316473,
+      "created": 1657047101421,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/listOrders",
+      "name": "listar todos os pedidos",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"pagina\": 1,\n\t\"registros_por_pagina\": 100\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d8dc9ba3deca4b88b30aff4807137c95"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1657041184676.4062,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_92588fa5230f48ebb5f8c731e9124b4b",
+      "parentId": "fld_9465a8474d814ad7846790701e0f17a5",
+      "modified": 1657047229175,
+      "created": 1657046888265,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/registerCustomer",
+      "name": "cadastro de usuario",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"codigo_cliente_integracao\": \"sandbar01\",\n\t\"email\": \"primeiro@ccliente.com.br\",\n\t\"razao_social\": \"Primeiro Cliente  Ltda Me\",\n\t\"nome_fantasia\": \"Primeiro Cliente\",\n\t\"cnpj_cpf\": \"86977167211\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d8dc9ba3deca4b88b30aff4807137c95"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1657041184720.1562,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_9465a8474d814ad7846790701e0f17a5",
+      "parentId": "fld_9e39d3259ec74cb786296f9b9b934d63",
+      "modified": 1657047007413,
+      "created": 1657046992979,
+      "name": "usuarios",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1657041519050.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_e48e96a69f7a423f80d36c909af459ae",
+      "parentId": "fld_9465a8474d814ad7846790701e0f17a5",
+      "modified": 1657047242922,
+      "created": 1657046938800,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/deleteCustomer",
+      "name": "deleção de usuario",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"codigo_cliente_omie\": 0,\n  \"codigo_cliente_integracao\": \"\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d8dc9ba3deca4b88b30aff4807137c95"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1657041184670.1562,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f7252ae239754981b6c943618b83c1f4",
+      "parentId": "fld_9465a8474d814ad7846790701e0f17a5",
+      "modified": 1657047260060,
+      "created": 1657046941380,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/listCustomers",
+      "name": "listagem de usuarios",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"pagina\": 1,\n\t\"registros_por_pagina\": 50\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d8dc9ba3deca4b88b30aff4807137c95"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1657041184620.1562,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d1d91f5e02694dd9be19a027f95e7668",
+      "parentId": "fld_4c2f9317d7204fbaa4b1a7ad80d898aa",
+      "modified": 1657039991788,
+      "created": 1657036139183,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/products",
+      "name": "CSV leitura e salvamento no banco",
+      "description": "",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU3MDM5OTYyLCJleHAiOjE2NTcwNDM1NjJ9.XiZnWFOxf0IHed7tmZHCcuGMSn9d_NbxGub6H0iV9s8"
+      },
+      "metaSortKey": -1654201084969,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_4c2f9317d7204fbaa4b1a7ad80d898aa",
+      "parentId": "wrk_edd184540a3141d0ba89bd1c00be2697",
+      "modified": 1657036168165,
+      "created": 1657036168165,
+      "name": "CSV operations",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1657036168165,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_246c75c0f66540bf8fc8633333891072",
+      "parentId": "fld_4c2f9317d7204fbaa4b1a7ad80d898aa",
+      "modified": 1657040222527,
+      "created": 1657040218135,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/products",
+      "name": "CSV get na DB ",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU3MDM5OTYyLCJleHAiOjE2NTcwNDM1NjJ9.XiZnWFOxf0IHed7tmZHCcuGMSn9d_NbxGub6H0iV9s8"
+      },
+      "metaSortKey": -1654164113732.5312,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8d7e105c16be4162a7b15042fdce9a22",
+      "parentId": "fld_c64ae473a73642e7af677e526bb28109",
+      "modified": 1657039958443,
+      "created": 1657034634490,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/signup",
+      "name": "sign-up",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"teste\",\n\t\"email\": \"teste@email.com\",\n\t\"password\": \"123456789\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_87f051862a7442b9a7ee77f5a2d266a2"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1653951681943,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_c64ae473a73642e7af677e526bb28109",
+      "parentId": "wrk_edd184540a3141d0ba89bd1c00be2697",
+      "modified": 1657034634487,
+      "created": 1657034634487,
+      "name": "Cadastro e Login",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1654888499372,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_3a3056accb6b4c1097bf0af3074561ff",
+      "parentId": "fld_c64ae473a73642e7af677e526bb28109",
+      "modified": 1657039961440,
+      "created": 1657034634494,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/login",
+      "name": "log-in",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"teste@email.com\",\n\t\t\"password\": \"123456789\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_87f051862a7442b9a7ee77f5a2d266a2"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1653951681893,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_14c8ba452f82498f83b3038017569754",
+      "parentId": "fld_c64ae473a73642e7af677e526bb28109",
+      "modified": 1657034660843,
+      "created": 1657034634498,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/user",
+      "name": "user",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA2NzgxLCJleHAiOjE2NTYxMTAzODF9._xsW_dzYe59Ja6BXS5IeRiyTumxCYG6bOER-ZQkJXIc"
+      },
+      "metaSortKey": -1653422601486.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3a68d129170548c28f6c97a82462c619",
+      "parentId": "fld_c64ae473a73642e7af677e526bb28109",
+      "modified": 1657034667822,
+      "created": 1657034634501,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/user/updateUser",
+      "name": " user update",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"id\": 1,\n\t\"name\": \"Bossa\",\n\t\"email\": \"bossa@fakeemail.com\",\n\t\"cpf\": \"38305044412\",\n\t\"phone\": \"19988319999\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_b16bb7a1f2274b068c9f8ddf8c9bea6e"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA2NzgxLCJleHAiOjE2NTYxMTAzODF9._xsW_dzYe59Ja6BXS5IeRiyTumxCYG6bOER-ZQkJXIc"
+      },
+      "metaSortKey": -1653158061283.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c73844d1c7af444698922e921802359d",
+      "parentId": "fld_028950cab933459187478ff1327990fc",
+      "modified": 1657034678983,
+      "created": 1657034634509,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/delinquentCustomerHighligths",
+      "name": "clientes inadiplentes",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs",
+        "disabled": false
+      },
+      "metaSortKey": -1654076383506,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_028950cab933459187478ff1327990fc",
+      "parentId": "wrk_edd184540a3141d0ba89bd1c00be2697",
+      "modified": 1657034634507,
+      "created": 1657034634507,
+      "name": "Usuario",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1654888499347,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_41866a5fde79437f9038f99907f9371e",
+      "parentId": "fld_028950cab933459187478ff1327990fc",
+      "modified": 1657034683593,
+      "created": 1657034634513,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/highlightsCustomersUpToDate",
+      "name": "clientes em dia",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA2NzgxLCJleHAiOjE2NTYxMTAzODF9._xsW_dzYe59Ja6BXS5IeRiyTumxCYG6bOER-ZQkJXIc",
+        "disabled": false
+      },
+      "metaSortKey": -1654076383493.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a5ce8da8c45f42f187bd6694ff1d4761",
+      "parentId": "fld_276b0bfde26b4605801a26487be5ecb0",
+      "modified": 1657034688060,
+      "created": 1657034634519,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/registerCustomer",
+      "name": "Cadastro de cliente",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Gato Felix\",\n\t\"email\": \"felixogato@fakemail.com\",\n\t\"cpf\": \"33355544499\",\n\t\"phone\": \"91988775511\",\n\t\"adress\": \"1234\",\n\t\"cep\": \"12345678\",\n\t\"complement\": \"apto 20\",\n\t\"district\": \"sei lá\",\n\t\"city\":\"Sin city\",\n\t\"uf\":\"LA\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_072e1d14efe34d90801d3b31320e3320"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs"
+      },
+      "metaSortKey": -1654888526972,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": false,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_276b0bfde26b4605801a26487be5ecb0",
+      "parentId": "wrk_edd184540a3141d0ba89bd1c00be2697",
+      "modified": 1657034634517,
+      "created": 1657034634517,
+      "name": "Clientes",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1654888499322,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_5b01eede54f2497ab372f3fd8e47e497",
+      "parentId": "fld_276b0bfde26b4605801a26487be5ecb0",
+      "modified": 1657034692354,
+      "created": 1657034634527,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/delinquentCustomerHighligths",
+      "name": "highlights clientes inadimplentes",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs"
+      },
+      "metaSortKey": -1654685491111.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": false,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6cf98f22e7fb423390ebffa10e8a3ecd",
+      "parentId": "fld_276b0bfde26b4605801a26487be5ecb0",
+      "modified": 1657034696152,
+      "created": 1657034634523,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/allDelinquentCustomers",
+      "name": "Todos os clientes inadimplentes",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs"
+      },
+      "metaSortKey": -1654482455251.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": false,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8be015fbcc4a4790ba60cae5562e2715",
+      "parentId": "fld_276b0bfde26b4605801a26487be5ecb0",
+      "modified": 1657034700723,
+      "created": 1657034634530,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/highlightsCustomersUpToDate",
+      "name": "highlights clientes em dia",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs"
+      },
+      "metaSortKey": -1654431696286.4375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": false,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_dd590ca248f2482cbaf496b25641771b",
+      "parentId": "fld_276b0bfde26b4605801a26487be5ecb0",
+      "modified": 1657034704517,
+      "created": 1657034634538,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/allCustomersUpToDate",
+      "name": "Todos os clientes em dia",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_fb56500e48a14b59be6c208fb28dc043",
+          "name": "offset",
+          "value": "0",
+          "description": ""
+        }
+      ],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs"
+      },
+      "metaSortKey": -1654380937321.375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": false,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6366696998f44b3aa8fbd9f459368fbd",
+      "parentId": "fld_276b0bfde26b4605801a26487be5ecb0",
+      "modified": 1657034708554,
+      "created": 1657034634534,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/customers",
+      "name": "Todos os clientes",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs"
+      },
+      "metaSortKey": -1654127142496.0625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": false,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_de41288e2b2b4f649d4f5c3acb8bbd0f",
+      "parentId": "fld_b0ef44923729492e98209e58833fd049",
+      "modified": 1657034737505,
+      "created": 1657034634453,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/billingRegister/1",
+      "name": "cadastro de cobrança",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"user_id\": 1,\n\t\"description\": \"Mercado do mês\",\n\t\"due_date\": \"2022-03-22\",\n\t\"value\": 25000,\n\t\"status\": false\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_f490cdbe54ad4dcc9e05037c8120abba"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs",
+        "disabled": false
+      },
+      "metaSortKey": -1653967269619.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_b0ef44923729492e98209e58833fd049",
+      "parentId": "fld_548a6fd14a094e5980e24d71f11cd800",
+      "modified": 1657034634450,
+      "created": 1657034634450,
+      "name": "cadastro",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1655150809407,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_548a6fd14a094e5980e24d71f11cd800",
+      "parentId": "wrk_edd184540a3141d0ba89bd1c00be2697",
+      "modified": 1657034634433,
+      "created": 1657034634433,
+      "name": "cobranças",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1654201085019,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_9a18eaa166a6496b91c0cf6a75567dfd",
+      "parentId": "fld_5024ec80596843da8915088b4ccaa557",
+      "modified": 1657034745074,
+      "created": 1657034634445,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/highlightsPaidCharges",
+      "name": "destaques cobranças pagas",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs",
+        "disabled": false
+      },
+      "metaSortKey": -1654029620488.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_5024ec80596843da8915088b4ccaa557",
+      "parentId": "fld_548a6fd14a094e5980e24d71f11cd800",
+      "modified": 1657034634435,
+      "created": 1657034634435,
+      "name": "highlights",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1655150787813,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_2bc3e395f6a3434c98ee98a6f982d908",
+      "parentId": "fld_5024ec80596843da8915088b4ccaa557",
+      "modified": 1657034748291,
+      "created": 1657034634437,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/highlightsOverdueCollections",
+      "name": "destaque das cobranças vencidas",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs",
+        "disabled": false
+      },
+      "metaSortKey": -1654029620438.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a3ba798dfab4418aa1c351ad2ebe40cb",
+      "parentId": "fld_5024ec80596843da8915088b4ccaa557",
+      "modified": 1657034751275,
+      "created": 1657034634441,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/highlightsExpectedCharges",
+      "name": "destaques cobranças previstas",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs",
+        "disabled": false
+      },
+      "metaSortKey": -1654029620388.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f049c13a6b674b91a0d399fd68c2230c",
+      "parentId": "fld_548a6fd14a094e5980e24d71f11cd800",
+      "modified": 1657034756886,
+      "created": 1657034634468,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/totalAmountAllCharges",
+      "name": "Total dos valores de todas as cobranças",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs",
+        "disabled": false
+      },
+      "metaSortKey": -1654076383531,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6235a6ee48e145648d1f921e42ff2ece",
+      "parentId": "fld_548a6fd14a094e5980e24d71f11cd800",
+      "modified": 1657034760207,
+      "created": 1657034634479,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/allChargesPaid",
+      "name": "todas as cobranças pagas",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs",
+        "disabled": false
+      },
+      "metaSortKey": -1654076383518.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_10fc3afbcfed41f0bf36007a56641b40",
+      "parentId": "fld_548a6fd14a094e5980e24d71f11cd800",
+      "modified": 1657034763476,
+      "created": 1657034634471,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/allOverdueCharges",
+      "name": "todas as cobranças vencidas",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs",
+        "disabled": false
+      },
+      "metaSortKey": -1654076383481,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_21fad890605f431683e14c79efac93d4",
+      "parentId": "fld_548a6fd14a094e5980e24d71f11cd800",
+      "modified": 1657034768198,
+      "created": 1657034634483,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/allAnticipatedCharges",
+      "name": "todas as cobranças previstas",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs",
+        "disabled": false
+      },
+      "metaSortKey": -1654045208077.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a586d281779b4698b757b7947849a9d8",
+      "parentId": "fld_548a6fd14a094e5980e24d71f11cd800",
+      "modified": 1657034771811,
+      "created": 1657034634475,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/billingList",
+      "name": "Listagem de cobranças",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU2MTA3Mjk3LCJleHAiOjE2NTYxMTA4OTd9.hZivnFLUQAsBTF4iB1Rf7ckdqt1xdKw1ZvpJ5f1sUgs",
+        "disabled": false
+      },
+      "metaSortKey": -1653975063457.9375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d757d9b986b84c12a4fc4fb992a93815",
+      "parentId": "fld_548a6fd14a094e5980e24d71f11cd800",
+      "modified": 1657036101229,
+      "created": 1657035738395,
+      "url": "https://teste-hausz-topico01-02.herokuapp.com/billingEdit/:id_charge",
+      "name": "Deletar cobrança",
+      "description": "",
+      "method": "DELETE",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"id_customer\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_119ba255c342470189481184c39701ed"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1653975063407.9375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_9514597ecc8a408690f2665a3e008c2b",
+      "parentId": "wrk_edd184540a3141d0ba89bd1c00be2697",
+      "modified": 1657034634412,
+      "created": 1657034634412,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1653932814468,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_78bfb6edabb849368dc3b6d6754e333f",
+      "parentId": "wrk_edd184540a3141d0ba89bd1c00be2697",
+      "modified": 1657034634423,
+      "created": 1657034634423,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_78c5878bc1414f6ebb8897ee22a2a4eb",
+      "parentId": "wrk_edd184540a3141d0ba89bd1c00be2697",
+      "modified": 1657034634557,
+      "created": 1657034634429,
+      "fileName": "Hausz",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
