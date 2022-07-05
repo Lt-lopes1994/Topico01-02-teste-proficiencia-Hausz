@@ -1,6 +1,6 @@
 const express = require("express");
 
-const { readCSV, getAll } = require("./controllers/csv");
+const { readCSV, getAll, getById } = require("./controllers/csv");
 const {
   registerUser,
   informationToTheUserHimself,
@@ -45,6 +45,7 @@ routes.use(checkLogin);
 //?? Leitura do arquivo CSV e salvamento no banco de dados.
 routes.post("/products", readCSV);
 routes.get("/products", getAll);
+routes.get("/products/:id", getById);
 
 //?? CRUD do primeiro tópico.
 routes.get("/user", informationToTheUserHimself);

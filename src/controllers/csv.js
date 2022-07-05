@@ -29,4 +29,12 @@ const getAll = async (req, res) => {
   return res.json(result);
 };
 
-module.exports = { readCSV, getAll };
+const getById = async (req, res) => {
+  const { id } = req.params;
+
+  const result = await knex("topico02").select("*").where({ id });
+
+  return res.json(result);
+};
+
+module.exports = { readCSV, getAll, getById };
